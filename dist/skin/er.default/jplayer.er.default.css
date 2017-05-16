@@ -71,23 +71,27 @@
 
 .jp-video .jp-controls { float: left; }
 
-.jp-controls button { display: block; float: left; overflow: hidden; text-indent: -9999px; border: none; cursor: pointer; }
+.jp-controls button { display: block; float: left; overflow: hidden; border: none; cursor: pointer; background-color: transparent; }
 
-.jp-play { width: 50px; height: 50px; }
+.jp-play, .jp-pause { width: 50px; height: 50px; }
 
-.jp-play { background: url("../er.default/image/jplayer.er.default.png") 0 0 no-repeat; }
+.jp-pause { display: none; color: #fff; }
 
-.jp-play:focus { background: url("../er.default/image/jplayer.er.default.png") -50px 0 no-repeat; }
+.jp-pause:active { color: #888; }
 
-.jp-state-playing .jp-play { background: url("../er.default/image/jplayer.er.default.png") 0 -50px no-repeat; }
+.jp-play { color: #fff; }
 
-.jp-state-playing .jp-play:focus { background: url("../er.default/image/jplayer.er.default.png") -50px -50px no-repeat; }
+.jp-play:active { color: #888; }
+
+.jp-state-playing .jp-play { display: none; }
+
+.jp-state-player .jp-pause { display: block; }
 
 .jp-stop, .jp-previous, .jp-next { width: 50px; height: 50px; margin-top: 6px; }
 
-.jp-stop { background: url("../er.default/image/jplayer.er.default.png") 0 -100px no-repeat; margin: 0; padding: 0; }
+.jp-stop { margin: 0; padding: 0; color: #fff; }
 
-.jp-stop:focus { background: url("../er.default/image/jplayer.er.default.png") -50px -100px no-repeat; }
+.jp-stop:active { color: #888; }
 
 .jp-previous { background: url("../er.default/image/jplayer.blue.monday.jpg") 0 -112px no-repeat; }
 
@@ -109,9 +113,9 @@
 
 .jp-video .jp-progress { top: 0px; left: 0px; width: 100%; height: 10px; }
 
-.jp-seek-bar { background: url("../er.default/image/jplayer.er.default.png") 0 -202px repeat-x; width: 0px; height: 100%; cursor: pointer; }
+.jp-seek-bar { background-color: #fff; width: 0px; height: 100%; cursor: pointer; }
 
-.jp-play-bar { background: url("../er.default/image/jplayer.er.default.png") 0 -218px repeat-x; width: 0px; height: 100%; }
+.jp-play-bar { background-color: #C74339; width: 0px; height: 100%; }
 
 /* The seeking class is added/removed inside jPlayer */
 .jp-seeking-bg { background: url("../er.default/image/jplayer.blue.monday.seeking.gif"); }
@@ -128,7 +132,7 @@
 
 .jp-video .jp-volume-controls { top: 12px; left: 50px; }
 
-.jp-volume-controls button { display: block; position: absolute; overflow: hidden; text-indent: -9999px; border: none; cursor: pointer; }
+.jp-volume-controls button { display: block; position: absolute; overflow: hidden; border: none; cursor: pointer; background-color: transparent; }
 
 .jp-audio .jp-volume-controls button { position: relative; }
 
@@ -138,21 +142,23 @@
 
 .jp-mute { left: 5px; top: 10px; }
 
-.jp-mute { background: url("../er.default/image/jplayer.er.default.png") -100px -100px no-repeat; }
+.jp-mute { color: #888; }
 
-.jp-mute:focus { background: url("../er.default/image/jplayer.er.default.png") -150px -100px no-repeat; }
+.jp-mute:focus { color: #888; }
 
-.jp-state-muted .jp-mute { background: url("../er.default/image/jplayer.er.default.png") 0 -150px no-repeat; }
+.jp-state-muted .jp-mute { color: #fff; }
 
-.jp-state-muted .jp-mute:focus { background: url("../er.default/image/jplayer.er.default.png") -50px -150px no-repeat; }
+.jp-state-muted .jp-mute:focus { color: #fff; }
 
-.jp-volume-max { background: url("../er.default/image/jplayer.er.default.png") -100px -150px no-repeat; }
+.jp-volume-max { color: #fff; }
 
-.jp-volume-max:focus { background: url("../er.default/image/jplayer.er.default.png") -150px -150px no-repeat; }
+.jp-volume-max:focus { color: #fff; }
 
-.jp-volume-bar { position: absolute; overflow: hidden; background: url("../er.default/image/jplayer.er.default.png") 0 -202px repeat-x; top: 5px; left: 22px; width: 46px; height: 15px; cursor: pointer; }
+.jp-volume-max:active { color: #888; }
 
-.jp-volume-bar-value { background: url("../er.default/image/jplayer.er.default.png") 0 -234px repeat-x; width: 0px; height: 15px; }
+.jp-volume-bar { position: absolute; overflow: hidden; background-color: #888; top: 5px; left: 22px; width: 46px; height: 15px; cursor: pointer; }
+
+.jp-volume-bar-value { background-color: #111; width: 0px; height: 15px; }
 
 .jp-audio .jp-volume-controls .jp-volume-bar { position: relative; left: 25%; top: -21px; width: 45%; height: 15px; }
 
