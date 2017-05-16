@@ -5,52 +5,30 @@
 <!-- Website Design By: www.happyworm.com -->
 <title>Demo : jPlayer as an audio player</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link href="../../dist/skin/fbc.default/fbc.default.css" rel="stylesheet" type="text/css" />
+<link href="../../dist/skin/er.default/jplayer.er.default.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../lib/jquery.min.js"></script>
 <script type="text/javascript" src="../../dist/jplayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="../../dist/jplayer/jplayer.js"></script>
+<script src="https://use.fontawesome.com/24bbb681fc.js"></script>
 <script type="text/javascript">
 //<![CDATA[
-$(document).ready(function(){
-
-	$("#jquery_jplayer_1").jPlayer({
-		ready: function (event) {
-			$(this).jPlayer("setMedia", {
-				title: "Bubble",
-				m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-				oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-			});
-		},
-		swfPath: "../../dist/jplayer",
-		supplied: "m4a, oga",
-		wmode: "window",
-		useStateClassSkin: true,
-		autoBlur: false,
-		smoothPlayBar: true,
-		keyEnabled: true,
-		remainingDuration: true,
-		toggleDuration: true
-	});
+$(document).ready(function(){	activeJPlayer("2","Test","http://fbc6.dnsalias.com/fileadmin/user_upload/sermon_resources/audio/sermon_audio_2015/mp3_20150104_life_together_13_glorify_god_in_your_body.mp3")
 });
 //]]>
 </script>
 </head>
 <body>
-<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+<div id="jquery_jplayer_2" class="jp-jplayer"></div>
+<div id="jp_container_2" class="jp-audio jp-audio-small" role="application" aria-label="media player">
 	<div class="jp-type-single">
-		<div class="jp-details">
-			<div class="jp-title" aria-label="title">&nbsp;</div>
-		</div>
 		<div class="jp-gui jp-interface">
+		  <div class="jp-controls-left">
 			<div class="jp-controls">
 				<button class="jp-play" role="button" tabindex="0">play</button>
 				<button class="jp-stop" role="button" tabindex="0">stop</button>
 			</div>
-			<div class="jp-progress">
-				<div class="jp-seek-bar">
-					<div class="jp-play-bar"></div>
-				</div>
-			</div>
+          </div>
+          <div class="jp-controls-right">
 			<div class="jp-volume-controls">
 				<button class="jp-mute" role="button" tabindex="0">mute</button>
 				<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
@@ -58,13 +36,21 @@ $(document).ready(function(){
 					<div class="jp-volume-bar-value"></div>
 				</div>
 			</div>
-			<div class="jp-time-holder">
-				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-				<div class="jp-toggles">
-					<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+              
+          </div>
+          <div class="jp-controls-centre">
+			<div class="jp-time-current">
+			    <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+			</div>
+			<div class="jp-time-duration">				
+				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>			
+			</div>
+			<div class="jp-progress">
+				<div class="jp-seek-bar">
+					<div class="jp-play-bar"></div>
 				</div>
 			</div>
+          </div>
 		</div>
 		
 		<div class="jp-no-solution">
